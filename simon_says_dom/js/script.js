@@ -17,9 +17,24 @@ const confirmbtnEl = document.getElementById("confirmbtn") // this button will a
 //Start
 
 startbtnEl.addEventListener('click', function (event) {
+
     //make instruction disappear
     instEl.classList.add('d-none');
     startbtnEl.classList.add('d-none')
+
+    //setting a count doUn
+    let time = 30;
+
+    setInterval(function () {
+
+        timerEl.innerText = time--;
+        if (time === 10) {
+            timerEl.classList.add('bg-warning')
+        }
+
+
+
+    }, 1000)
 
 })
 
