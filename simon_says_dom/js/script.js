@@ -6,6 +6,7 @@ const startbtnEl = document.getElementById("buttonstart")
 
 // 1 showing the generated numbers * 5
 const rndNumbersEl = document.getElementById("numbers-list")
+const randomNumberEl = document.getElementById("rndnumb")
 
 // 2 numbers disappear and user input appears
 const formEl = document.getElementById("answers-form")
@@ -28,13 +29,18 @@ startbtnEl.addEventListener('click', function (event) {
     setInterval(function () {
 
         timerEl.innerText = time--;
-        if (time === 10) {
-            timerEl.classList.add('bg-warning')
+        if (time === 9) {
+            timerEl.classList.add('bg-warning', 'rounded')
+        } else if (time === -2) {
+            timerEl.classList.add('d-none')
         }
-
-
-
     }, 1000)
+
+
+    // add radom numbers how? 
+    randomNumberEl.innerText = Math.floor(Math.random() * 10) + 1;
+
+
 
 })
 
