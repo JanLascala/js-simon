@@ -6,7 +6,11 @@ const startbtnEl = document.getElementById("buttonstart")
 
 // 1 showing the generated numbers * 5
 const rndNumbersEl = document.getElementById("numbers-list")
-const randomNumberEl = document.getElementById("rndnumb")
+const randomNumberEl1 = document.getElementById("rndnumb1")
+const randomNumberEl2 = document.getElementById("rndnumb2")
+const randomNumberEl3 = document.getElementById("rndnumb3")
+const randomNumberEl4 = document.getElementById("rndnumb4")
+const randomNumberEl5 = document.getElementById("rndnumb5")
 
 // 2 numbers disappear and user input appears
 const formEl = document.getElementById("answers-form")
@@ -33,12 +37,24 @@ startbtnEl.addEventListener('click', function (event) {
             timerEl.classList.add('bg-warning', 'rounded')
         } else if (time === -2) {
             timerEl.classList.add('d-none')
+            rndNumbersEl.classList.add('d-none')
+            formEl.classList.remove('d-none')
         }
     }, 1000)
 
 
-    // add radom numbers how? 
-    randomNumberEl.innerText = Math.floor(Math.random() * 10) + 1;
+    // add radom numbers how?- primitive and obtuse solution but solution nonetheless 
+    randomNumberEl1.innerText = Math.floor(Math.random() * 50) + 1;
+    console.log(randomNumberEl1)
+    randomNumberEl2.innerText = Math.floor(Math.random() * 50) + 1;
+    console.log(randomNumberEl2)
+    randomNumberEl3.innerText = Math.floor(Math.random() * 50) + 1;
+    console.log(randomNumberEl3)
+    randomNumberEl4.innerText = Math.floor(Math.random() * 50) + 1;
+    console.log(randomNumberEl4)
+    randomNumberEl5.innerText = Math.floor(Math.random() * 50) + 1;
+    console.log(randomNumberEl5)
+
 
 
 
