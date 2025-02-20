@@ -1,6 +1,8 @@
 # ex-js-simon-says-dom
 
-1 btn stard
+0 link html in js
+
+1 btn start
      
      text d none 
      generate random numbers 
