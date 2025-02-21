@@ -28,15 +28,18 @@ startbtnEl.addEventListener('click', function (event) {
     startbtnEl.classList.add('d-none')
 
     //setting a count doUn
-    let time = 30;
+    let time = 11;
 
-    setInterval(function () {
+
+
+    const clock = setInterval(function () {
 
         timerEl.innerText = time--;
         if (time === 9) {
             timerEl.classList.add('bg-warning', 'rounded')
-        } else if (time === -2) {
+        } else if (time === -1) {
             timerEl.classList.add('d-none')
+            clearInterval(clock)
             rndNumbersEl.classList.add('d-none')
             formEl.classList.remove('d-none')
         }
@@ -44,24 +47,29 @@ startbtnEl.addEventListener('click', function (event) {
 
 
     // add radom numbers how?- primitive and obtuse solution but solution nonetheless 
-    randomNumberEl1.innerText = Math.floor(Math.random() * 50) + 1;
+    randomNumberEl1.innerText = randomNumbers()
     console.log(randomNumberEl1)
-    randomNumberEl2.innerText = Math.floor(Math.random() * 50) + 1;
+    randomNumberEl2.innerText = randomNumbers()
     console.log(randomNumberEl2)
-    randomNumberEl3.innerText = Math.floor(Math.random() * 50) + 1;
+    randomNumberEl3.innerText = randomNumbers()
     console.log(randomNumberEl3)
-    randomNumberEl4.innerText = Math.floor(Math.random() * 50) + 1;
+    randomNumberEl4.innerText = randomNumbers()
     console.log(randomNumberEl4)
-    randomNumberEl5.innerText = Math.floor(Math.random() * 50) + 1;
+    randomNumberEl5.innerText = randomNumbers()
     console.log(randomNumberEl5)
+
+
 
 
 
 
 })
 
+function randomNumbers() {
 
+    return Math.floor(Math.random() * 50) + 1
 
+}
 
 
 
